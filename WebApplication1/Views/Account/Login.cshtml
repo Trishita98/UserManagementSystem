@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<link href="~/styles/style.css" rel="stylesheet" />
+
+
+<body style="background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80) ">
+    <div class="head">
+        <div class="head-text">
+            <h1>Login Form</h1>
+        </div>
+        <div class="login">
+            <div class="login-form">
+                <form action="@Url.Action("Index", "Tsignup")">
+                    <input type="text" class="Login" placeholder="Login" required />
+                    <input type="password" class="password" placeholder="Password" required />
+                    <input type="submit" value="Log in"/>
+
+                </form>
+            </div>
+            <ul>
+                <li><button type="button" onclick="location.href='@Url.Action("Create","Tsignup")'"> Register</></li>
+                <li><button type="button" onclick="location.href='@Url.Action("Viewpswrd","Pswrd")'">Forgot Password</button></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+   
+</body>
